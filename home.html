@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="reset.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <button class="header__btn"><img src="/images/menu.svg" alt="" /></button>
+    </header>
+
+    <nav class="navigation">
+      <div class="navigation__wrapper">
+        <button class="navigation__button">
+          <img
+            class="navigation__button_img"
+            src="images/close-icon.png"
+            alt=""
+          />
+        </button>
+        <ul class="navigation__list">
+          <li class="navigation__list_item"><a class="navigation__list_link" href="#home">главная</a></li>
+          <li class="navigation__list_item"><a class="navigation__list_link" href="#info">информация о тесте</a></li>
+          <li class="navigation__list_item"><a class="navigation__list_link" href="./pages/quiz/quiz.html">пройти тест</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="home" id="home">
+      <div class="container">
+        <h4 class="home__topText">Пройдите точный и быстрый</h4>
+        <h1 class="home__header">тест на определение IQ</h1>
+        <img class="home__image" src="./images/brain.png" alt="" />
+        <a class="testBtn" href="./pages/quiz/quiz.html"> пройти тест </a>
+        <p class="home__description">
+          <span class="text-yellow">
+            И получите рекомендации по развитию своего интеллекта</span
+          >
+          <br />
+          и улучшению финансового благосостояния и личной жизни
+        </p>
+        
+          <a class="home__more" href="#info">
+            <img class="home__more-icon" src="/images/arrow.svg" alt="" />
+            <p class="home__more-text">Подробнее</p>
+          </a>
+          
+        
+      </div>
+    </section>
+
+    <div class="quote" id="info">
+      <img class="quote__img" src="/images/quote_bg.png" alt="" />
+      <div class="container">
+        <div class="quote__wrapper">
+          <p class="quote__text">
+            Профессиональный IQ-тест позволяет не только определить коэффициент
+            вашего интеллекта, но и выработать список рекомендаций для повышения
+            этого показателя.
+            <img class="quote__quotes-2" src="/images/quotes-2.svg" alt="" />
+            <img class="quote__quotes-1" src="/images/quotes-1.svg" alt="" />
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="benefits">
+      <div class="container">
+        <p class="benefits__text">
+          Также по результатам теста <b>ВЫ ПОЛУЧИТЕ</b> подробные СОВЕТЫ по
+          определению наиболее перспективной
+          <b>ДЛЯ ВАШЕГО ТИПА интеллекта СФЕРЫ ДЕЯТЕЛЬНОСТИ,</b>
+          которая принесет вам скорейший финансовый результат.
+        </p>
+        <img class="benefits__img" src="/images/benefits.png" alt="" />
+        <a class="testBtn" href="./pages/quiz/quiz.html"> пройти тест </a>
+      </div>
+    </section>
+
+    <section class="summary">
+      <img
+        class="summary__lightning-right"
+        src="/images/lightning_right.png"
+        alt=""
+      />
+      <img
+        class="summary__lightning-left"
+        src="/images/lightning_left.png"
+        alt=""
+      />
+      <div class="container">
+        <p class="summary__text">
+          Прохождение теста займет у вас не более
+          <span class="text-yellow">12 минут,</span> а его <b>результаты</b> вы
+          <span class="text-yellow">сможете использовать всю жизнь.</span>
+        </p>
+        <div class="summary__text-div">
+          Профессиональная интерпретация и детально
+          <b>проработанные рекомендации</b> позволят вам качественно
+          <b>изменить все аспекты своей жизни:</b> от финансового до любовного.
+        </div>
+        <a class="testBtn-transparent" href="./pages/quiz/quiz.html"> пройти тест </a>
+        <p class="summary__copyright">© 2019</p>
+      </div>
+    </section>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

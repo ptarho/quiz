@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "PT Serif";
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation {
+  width: 30vw;
+  height: 100vh;
+  background: #181818;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  min-width: 250px;
+  display: none;
+}
+.navigation__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 200px;
+}
+.navigation__button {
+  background:none;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+.navigation__button_img {
+  width: 28px;
+}
+.navigation__list {
+  list-style: none;
+  margin: 0;
+  padding-left: 15px;
+}
+.navigation__list_item {
+  margin-top: 40px;
+}
+.navigation__list_link:hover {
+  color: #ffc700;
+}
+.navigation__list_link {
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  cursor: pointer;
+}
+
+.header {
+  background: #181818;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100vw;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.header__btn {
+  background: none;
+  border: none;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.home {
+  background-image: url("./images/home_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.home__topText {
+  font-weight: 400;
+  margin-top: 27px;
+  font-size: 25px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.home__header {
+  font-family: "Yeseva One";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffc700;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 20px;
+}
+
+.home__description {
+  max-width: 500px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  margin: 3px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-top: 22px;
+}
+
+
+.home__more {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home__more-icon {
+  width: 26px;
+  margin-top: 15px;
+}
+.home__more-text {
+  margin-top: 10px;
+  line-height: 11px;
+  text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+
+.home__image {
+  width: 250px;
+  margin: 30px 0;
+}
+
+.text-yellow {
+  color: #ffc700;
+}
+
+.testBtn, .testBtn-transparent {
+  width: 190px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #ffc700;
+  color: #0d0c11;
+  text-decoration: none;
+  border-radius: 20px;
+}
+.testBtn:hover, .testBtn-transparent:hover {
+  background-color:#8e8e8e;
+}
+.testBtn:active, 
+.testBtn-transparent:active {
+  background: #dadada;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: #8e8e8e;
+}
+.testBtn-transparent {
+  color: white;
+  border: 1px solid white; 
+  background: none;
+  margin-top: 40px;
+}
+
+.quote {
+  position: relative;
+  max-height: 100vh;
+  
+}
+.quote__img {
+  width: 100%;
+  max-height: 100vh;
+  z-index: -1;
+}
+.quote__wrapper {
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(84.34% 50.29% at 48.75% 49.71%, #2950C2 0%, rgba(38, 91, 199, 0.96) 40.62%, rgba(39, 98, 187, 0) 85.42%); 
+}
+
+.quote__text {
+  width: 70%;
+  font-family: "Yeseva One";
+  font-size: 3vw;
+  letter-spacing: 0.05em;
+  box-shadow: rgba(38, 91, 199, 0.96);
+  position: relative;
+}
+.quote__quotes-1 {
+  position: absolute;
+  width: 5%;
+  top: -20%;
+  left: -5%;
+}
+.quote__quotes-2 {
+  position: absolute;
+  width: 5%;
+  right: 0;
+  bottom: -15%;
+}
+
+.benefits {
+  height: 100vh;
+}
+.benefits__text {
+  max-width: 700px;
+  color: #272727;
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+}
+.benefits__img {
+  max-width: 600px;
+  width: 60%;
+  margin-top: 100px;
+}
+
+.summary {
+  background-image: url("./images/home_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  font-size: 25px;
+}
+.summary__lightning-right, .summary__lightning-left {
+  position: absolute;
+  width: 250px;
+  z-index: 0;
+}
+.summary__lightning-right {
+  right: 0;
+  top: 10%;
+}
+.summary__lightning-left {
+  left: 0;
+  bottom: 0;
+}
+.summary__text {
+  margin-top: auto;
+}
+.summary__text-div {
+  color: #272727;
+  background: rgba(243, 243, 242, 0.8);
+  border-radius: 20px;
+  padding: 30px 15px;
+  z-index: 1;
+  margin-top: 30px;
+  max-width: 700px;
+  text-align: center;
+}
+.summary__copyright {
+  margin-top: auto;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: small;
+}
