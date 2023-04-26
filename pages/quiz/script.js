@@ -53,8 +53,11 @@ function displayVariants(arr, style) {
     radio.value = e;
     radio.name = "answer";
     radio.classList.add("quiz__radio");
+
+    const customRadio = document.createElement("span") 
+    customRadio.classList.add("quiz__custom-radio")
     if (style !== "column") {
-      radio.style.display = "none";
+      customRadio.style.display = "none";
     }
     radio.onclick = () => {
       handleAnswerSelection(radio);
@@ -62,6 +65,7 @@ function displayVariants(arr, style) {
 
     variant.appendChild(span);
     variant.appendChild(radio);
+    variant.appendChild(customRadio)
     quizForm.appendChild(variant);
     //console.log(variant);
   });
@@ -91,9 +95,14 @@ function displayQuestion(node) {
 
   if (node.img) {
     const questionImg = document.createElement("img");
-    questionImg.setAttribute("src", `/images/${node.img}`);
+    questionImg.setAttribute("src", `../../images/${node.img}`);
     questionImg.classList.add("quiz__image");
     quizQuestion.appendChild(questionImg);
+  }
+  if (node.hr) {
+    const hr = document.createElement("hr")
+    hr.classList.add("quiz__hr")
+    quizQuestion.appendChild(hr);
   }
 
   displayVariants(node.variants, node.style);

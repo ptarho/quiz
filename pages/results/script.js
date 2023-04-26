@@ -1,6 +1,6 @@
 const timerText = document.querySelector(".timer");
 const callBtn = document.querySelector(".result__call");
-const pageDiv = document.querySelector(".results")
+const pageDiv = document.querySelector(".result")
 const apiContainer = document.querySelector(".result__api-data")
 
 function timer(seconds) {
@@ -24,6 +24,9 @@ async function apiCall() {
 }
 
 function displayApiData(data) {
+  if (document.querySelector(".table")) {
+    return alert("Вы уже получили результат!")
+  }
   const table = document.createElement("table")
   table.classList.add("table")
   for (key in data) {

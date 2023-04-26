@@ -3,7 +3,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.results {
+.result {
   min-height: 100vh;
   color: #f2f3f3;
   display: flex;
@@ -11,6 +11,7 @@ body {
   align-items: center;
   padding: 50px;
   padding-bottom: 0;
+  text-align: center;
 }
 
 .underline {
@@ -21,12 +22,19 @@ body {
   color: #3bde7c;
 }
 
-.results__h3,
+.result__h3,
 .result__h2 {
   text-transform: uppercase;
   margin-top: 50px;
 }
-.results__text,
+.result__h3 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.result__text,
 .result__text-area {
   margin-top: 20px;
   max-width: 500px;
@@ -63,7 +71,8 @@ body {
   margin: 40px 0;
   border-collapse: collapse;
 }
-.table__row, .table__data {
+.table__row,
+.table__data {
   padding: 10px 20px;
   border: 1px solid white;
 }
@@ -76,4 +85,52 @@ body {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 400px) {
+  .header__text {
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+  }
+
+  .result__h2 {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .result__h3 {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+  .result__text {
+    font-size: 14px;
+  }
+  .result__text-area {
+    padding: 15px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .footer {
+    padding: 0 15px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7px;
+    line-height: 10px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .table__data, .table__row {
+    padding: 5px;
+  }
 }

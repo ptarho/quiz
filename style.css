@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=PT+Serif:wght@400;700&family=Roboto:wght@300;400;500;900&family=Yeseva+One&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -20,7 +20,7 @@ body {
 }
 
 .navigation {
-  width: 30vw;
+  width: 300px;
   height: 100vh;
   background: #181818;
   position: fixed;
@@ -37,7 +37,7 @@ body {
   padding-top: 200px;
 }
 .navigation__button {
-  background:none;
+  background: none;
   border: none;
   position: absolute;
   right: 20px;
@@ -63,7 +63,7 @@ body {
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   cursor: pointer;
 }
 
@@ -124,7 +124,6 @@ body {
   margin-top: 22px;
 }
 
-
 .home__more {
   margin-top: 50px;
   display: flex;
@@ -153,7 +152,8 @@ body {
   color: #ffc700;
 }
 
-.testBtn, .testBtn-transparent {
+.testBtn,
+.testBtn-transparent {
   width: 190px;
   min-height: 40px;
   display: flex;
@@ -171,10 +171,11 @@ body {
   text-decoration: none;
   border-radius: 20px;
 }
-.testBtn:hover, .testBtn-transparent:hover {
-  background-color:#8e8e8e;
+.testBtn:hover,
+.testBtn-transparent:hover {
+  background-color: #8e8e8e;
 }
-.testBtn:active, 
+.testBtn:active,
 .testBtn-transparent:active {
   background: #dadada;
   box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -182,7 +183,7 @@ body {
 }
 .testBtn-transparent {
   color: white;
-  border: 1px solid white; 
+  border: 1px solid white;
   background: none;
   margin-top: 40px;
 }
@@ -190,7 +191,6 @@ body {
 .quote {
   position: relative;
   max-height: 100vh;
-  
 }
 .quote__img {
   width: 100%;
@@ -206,7 +206,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(84.34% 50.29% at 48.75% 49.71%, #2950C2 0%, rgba(38, 91, 199, 0.96) 40.62%, rgba(39, 98, 187, 0) 85.42%); 
+  background: radial-gradient(
+    84.34% 50.29% at 48.75% 49.71%,
+    #2950c2 0%,
+    rgba(38, 91, 199, 0.96) 40.62%,
+    rgba(39, 98, 187, 0) 85.42%
+  );
 }
 
 .quote__text {
@@ -214,7 +219,7 @@ body {
   font-family: "Yeseva One";
   font-size: 3vw;
   letter-spacing: 0.05em;
-  box-shadow: rgba(38, 91, 199, 0.96);
+  /* box-shadow: rgba(38, 91, 199, 0.96); */
   position: relative;
 }
 .quote__quotes-1 {
@@ -256,8 +261,10 @@ body {
   height: 100vh;
   position: relative;
   font-size: 25px;
+  font-family: "Merriweather";
 }
-.summary__lightning-right, .summary__lightning-left {
+.summary__lightning-right,
+.summary__lightning-left {
   position: absolute;
   width: 250px;
   z-index: 0;
@@ -281,10 +288,100 @@ body {
   z-index: 1;
   margin-top: 30px;
   max-width: 700px;
-  text-align: center;
 }
 .summary__copyright {
   margin-top: auto;
   color: rgba(255, 255, 255, 0.5);
   font-size: small;
+}
+
+@media screen and (max-width: 600px) {
+}
+@media screen and (max-width: 425px) {
+  .navigation {
+    width: 100%;
+    opacity: 0.96;
+  }
+  .container {
+    padding: 0 12px;
+  }
+  .home__topText {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+  }
+  .home__header {
+    max-width: 250px;
+  }
+  .home__image {
+    margin: 0;
+  }
+  .home__description {
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+  }
+  .home__image {
+    width: 200px;
+  }
+  .home__more {
+    margin: 0;
+  }
+  .home__more-icon {
+    width:22px;
+  }
+  .home__more-text {
+    font-size: 10px;
+    line-height: 11px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+  .quote {
+    height: 340px;
+  }
+  .quote__img {
+    height: 100%;
+  }
+  .quote__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+    width: 250px;
+    letter-spacing: 0.1em;
+  }
+  .quote__quotes-1,
+  .quote__quotes-2 {
+    width: 25px;
+    height: 25px;
+  }
+  .quote__quotes-1 {
+    left: -15%;
+  }
+  .quote__quotes-2 {
+    right: -15%;
+  }
+
+  .benefits__text {
+    line-height: 27px;
+  }
+  .benefits__img {
+    width: 300px;
+    margin-top: 70px;
+  }
+
+  .summary__text {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+  }
+  .summary__text-div {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .testBtn-transparent {
+    z-index: 10;
+  }
 }

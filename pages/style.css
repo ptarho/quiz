@@ -1,3 +1,5 @@
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=PT+Serif:wght@400;700&family=Roboto:wght@300;400;500;900&family=Yeseva+One&display=swap');
+
 .container {
   display: flex;
   flex-direction: column;
@@ -90,4 +92,17 @@
   font-size: 18px;
   line-height: 14px;
   letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 400px) {
+  .header__container {
+    margin: 0;
+  }
+  .header__text {
+    margin-left: 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 15px;
+  }
 }

@@ -76,7 +76,8 @@
       "question": "Вставьте подходящее число",
       "img": "question-10.png",
       "variants": [34, 36, 53, 44, 66, 42],
-      "style": "row"
+      "style": "row",
+      "hr": true
     }
   ]
 }
