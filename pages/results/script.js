@@ -1,7 +1,22 @@
+// get DOM elements
 const timerText = document.querySelector(".timer");
 const callBtn = document.querySelector(".result__call");
 const pageDiv = document.querySelector(".result")
 const apiContainer = document.querySelector(".result__api-data")
+
+//get and display api data on button click 
+callBtn.addEventListener("click", async () => {
+  const fetchData = await apiCall()
+  console.log(fetchData)
+  displayApiData(fetchData)
+})
+//start timer on window load
+window.onload = async () => {
+  console.log("loaded");
+  timer(600);
+};
+
+
 
 function timer(seconds) {
   if (seconds < 0) {
@@ -27,8 +42,10 @@ function displayApiData(data) {
   if (document.querySelector(".table")) {
     return alert("Вы уже получили результат!")
   }
+
   const table = document.createElement("table")
   table.classList.add("table")
+
   for (key in data) {
     const row = document.createElement("tr")
     row.classList.add("table__row")
@@ -39,6 +56,7 @@ function displayApiData(data) {
     row.appendChild(td1)
 
     const td2 = document.createElement("td")
+    // check if api data is array to display it properly
     if (Array.isArray(data[key])) {
       let info = ''
       data[key].forEach(e => info += `${e}\n`)
@@ -56,13 +74,3 @@ function displayApiData(data) {
   pageDiv.appendChild(table)
 }
 
-callBtn.addEventListener("click", async () => {
-  const fetchData = await apiCall()
-  console.log(fetchData)
-  displayApiData(fetchData)
-})
-
-window.onload = async () => {
-  console.log("loaded");
-  timer(600);
-};
