@@ -148,7 +148,7 @@ window.addEventListener("load", async () => {
 
       return setTimeout(() => {
         console.log("redirect");
-        location.href = "/pages/results/results.html";
+        location.href = "/quiz/pages/results/results.html";
       }, 5000);
     }
 
