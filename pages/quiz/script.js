@@ -133,8 +133,9 @@ window.addEventListener("load", async () => {
   const questions = await getQuestions(); //get questions list
   let questionNumber = 0; //set counter to the first question
   const answers = [];
-  displayQuestion(questions[questionNumber]);
-
+  displayQuestion(questions[questionNumber]); //display first question
+  displayVariants(questions[questionNumber].variants, questions[questionNumber].style); //display first question variants
+  
   nextBtn.onclick = () => {
     if (!activeVariant) {
       return alert("Chose a variant");
@@ -163,7 +164,7 @@ window.addEventListener("load", async () => {
     activeVariant = null; //reset selected answer
 
     displayQuestion(questions[questionNumber]); //display next question
-    displayVariants(questions[questionNumber].variants, questions[questionNumber].style); //display nex question variants
+    displayVariants(questions[questionNumber].variants, questions[questionNumber].style); //display next question variants
     updateProgressBar(questionNumber, questions.length); 
   };
 });
